@@ -8,7 +8,9 @@
     box-sizing: border-box;
 }
 
-body {
+body {body {
+    background-color: #FFC0CB;
+}
 
     font-family: "Tahoma", sans-serif;
 
