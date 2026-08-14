@@ -1,0 +1,639 @@
+/* =========================
+   ตั้งค่าพื้นฐาน
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: "Tahoma", sans-serif;
+
+    background: #fff5f8;
+
+    color: #5c3745;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+
+    background: rgba(255, 255, 255, 0.95);
+
+    box-shadow:
+        0 3px 15px rgba(255, 105, 150, 0.15);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+}
+
+nav {
+
+    max-width: 1200px;
+
+    height: 70px;
+
+    margin: auto;
+
+    padding: 0 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+/* Logo */
+
+.logo {
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    color: #e85d8f;
+}
+
+
+/* Menu */
+
+nav ul {
+
+    display: flex;
+
+    list-style: none;
+
+    gap: 8px;
+}
+
+nav ul li a {
+
+    text-decoration: none;
+
+    color: #7a4658;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+
+    color: white;
+
+    background: #f58aaa;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 650px;
+
+    padding: 80px 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 100px;
+
+    background:
+
+        radial-gradient(
+            circle at top left,
+            #ffd9e6,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff5f8,
+            #ffe4ed,
+            #ffd3e2
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* ข้อความ */
+
+.hero-text {
+
+    max-width: 600px;
+
+    z-index: 2;
+}
+
+.welcome {
+
+    color: #e85d8f;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+
+    font-size: 60px;
+
+    color: #d94f80;
+
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+
+    font-size: 32px;
+
+    color: #6b3b4c;
+}
+
+.hero h2 span {
+
+    color: #e85d8f;
+}
+
+.student {
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #c94f78;
+
+    margin: 15px 0;
+}
+
+.description {
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+
+    color: #79515f;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #f17fa3;
+
+    color: white;
+
+    padding: 13px 28px;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 8px 20px rgba(241, 127, 163, 0.35);
+
+    transition: 0.3s;
+}
+
+.button:hover {
+
+    transform: translateY(-5px);
+
+    background: #e85d8f;
+
+    box-shadow:
+        0 12px 25px rgba(232, 93, 143, 0.4);
+}
+
+
+/* =========================
+   PROFILE
+========================= */
+
+.profile {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.profile-circle {
+
+    width: 290px;
+
+    height: 290px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border: 8px solid #f7a9c1;
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(216, 79, 128, 0.2);
+}
+
+.profile-icon {
+
+    font-size: 120px;
+}
+
+
+/* หัวใจรอบรูป */
+
+.small-heart {
+
+    position: absolute;
+
+    color: #ee6f99;
+
+    font-size: 30px;
+
+    animation: heartFloat 3s infinite ease-in-out;
+}
+
+.heart1 {
+
+    top: 10px;
+
+    right: 10px;
+}
+
+.heart2 {
+
+    bottom: 20px;
+
+    left: -20px;
+
+    animation-delay: 1s;
+}
+
+.heart3 {
+
+    top: 100px;
+
+    right: -30px;
+
+    animation-delay: 2s;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+
+    max-width: 800px;
+
+    margin: 70px auto;
+
+    padding: 45px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(232, 93, 143, 0.12);
+}
+
+.about h2 {
+
+    color: #e85d8f;
+
+    margin-bottom: 15px;
+
+    font-size: 30px;
+}
+
+.about p {
+
+    line-height: 2;
+
+    color: #79515f;
+}
+
+
+/* =========================
+   HEARTS FALLING
+========================= */
+
+.hearts span {
+
+    position: fixed;
+
+    top: -50px;
+
+    color: #f28bab;
+
+    font-size: 18px;
+
+    z-index: 2000;
+
+    pointer-events: none;
+
+    animation: falling linear infinite;
+}
+
+
+/* ตำแหน่งหัวใจ */
+
+.hearts span:nth-child(1) {
+
+    left: 5%;
+
+    animation-duration: 7s;
+
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+
+    left: 13%;
+
+    animation-duration: 9s;
+
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+
+    left: 22%;
+
+    animation-duration: 6s;
+
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(4) {
+
+    left: 31%;
+
+    animation-duration: 8s;
+
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(5) {
+
+    left: 40%;
+
+    animation-duration: 7s;
+
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(6) {
+
+    left: 50%;
+
+    animation-duration: 10s;
+
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(7) {
+
+    left: 60%;
+
+    animation-duration: 6s;
+
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(8) {
+
+    left: 70%;
+
+    animation-duration: 9s;
+
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(9) {
+
+    left: 78%;
+
+    animation-duration: 7s;
+
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(10) {
+
+    left: 85%;
+
+    animation-duration: 8s;
+
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(11) {
+
+    left: 92%;
+
+    animation-duration: 6s;
+
+    animation-delay: 4s;
+}
+
+.hearts span:nth-child(12) {
+
+    left: 97%;
+
+    animation-duration: 10s;
+
+    animation-delay: 1s;
+}
+
+
+/* Animation หัวใจตก */
+
+@keyframes falling {
+
+    0% {
+
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 1;
+    }
+
+    50% {
+
+        transform:
+            translateY(50vh)
+            translateX(20px)
+            rotate(180deg);
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            translateX(-20px)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* Animation หัวใจรอบรูป */
+
+@keyframes heartFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px);
+
+    }
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #f08aaa;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav {
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 15px;
+    }
+
+    nav ul {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+
+        padding: 7px 10px;
+
+        font-size: 14px;
+    }
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 50px;
+
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+
+        font-size: 45px;
+    }
+
+    .hero h2 {
+
+        font-size: 25px;
+    }
+
+    .profile-circle {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+    .profile-icon {
+
+        font-size: 90px;
+    }
+
+    .about {
+
+        margin: 40px 20px;
+
+        padding: 30px 20px;
+    }
+
+}
